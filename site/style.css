@@ -1,0 +1,46 @@
+/* Paleta suave e agradável */
+:root {
+    --fundo: linear-gradient(135deg, #a8edea, #fed6e3);
+    --texto: #333;
+    --sombra: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--fundo);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.titulo {
+    font-size: 4rem;
+    color: var(--texto);
+    text-shadow: 2px 4px 8px var(--sombra);
+    animation: aparecer 2s ease-out, flutuar 3s ease-in-out infinite alternate;
+}
+
+/* Animação de entrada suave */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animação sutil de flutuar */
+@keyframes flutuar {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
